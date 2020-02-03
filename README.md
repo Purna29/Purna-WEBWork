@@ -1,5 +1,6 @@
 #                                                             INTRODUCTION
 
+![Image](https://user-images.githubusercontent.com/60519446/73626106-b7323580-4615-11ea-9724-e7c5a5d29f48.jpg)
 
 ## COMPUTER EXPERIENCE:
 
