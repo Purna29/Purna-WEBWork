@@ -28,17 +28,14 @@
 
 export default {
   name: 'Home',
-
+  created(){
+    Game.Init();
+  },
   data:()=>({
-    Players,
-    PictureDeck,
-    CurrentPicture
-  }),
-  components: {
-    
-  }
+    Game
+  })
 }
-</script>
+  </script>
 
 <style >
   img.card-image {
