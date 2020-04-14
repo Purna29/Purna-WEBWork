@@ -7,9 +7,17 @@ const game = require('../models/Game');
 
 const router = express.Router();
 
+router.use(function(req, res, next) {
+    if(req.userId != null ){
+        req.playerId = game.GetPlayerId(req.userId)
+    }
+    console.log({ userId: req.userId, playerId: req.playerId })
+    next();
+});
+
 router
     .get('/', (req, res) => { 
-        console.log(game)
+        console.log( req.userId );
         res.send({
             Players: game.Players, PictureDeck: game.PictureDeck, CurrentPicture: game.CurrentPicture,
             CardsInPlay: game.CardsInPlay.map(x=> ({...x, PlayerId: 'unknown' }) ) 
