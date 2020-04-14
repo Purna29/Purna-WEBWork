@@ -35,8 +35,7 @@ router
     })
 
    .post('/cardsInPlay', (req, res) => {
-        const playerId = req.body.playerId;
-        game.SubmitCaption(req.body.caption, playerId);
+        game.SubmitCaption(req.body.caption, req.playerId);
         res.send({ success: true })
     })
 
